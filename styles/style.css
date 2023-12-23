@@ -83,7 +83,7 @@ ol {
   width: 5px; 
 }
 .content__list::-webkit-scrollbar-thumb {
-  background: #555;
+  background: #444;
 }
 .content__list::-webkit-scrollbar-track {
   background: transparent;
