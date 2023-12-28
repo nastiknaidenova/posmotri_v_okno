@@ -18,6 +18,7 @@ html {
   margin: auto;
   display: flex;
   align-items: center;
+  justify-content: center;
 }
 
 h1,
@@ -44,8 +45,11 @@ ol {
 /********************/
 
 .content {
+  min-width: 1140px;
+  max-height: 534px;
   display: flex;
   align-items: end;
+  justify-content: center;
   gap: 30px;
 }
 
@@ -78,15 +82,15 @@ ol {
 /********************/
 
 .result {
+  min-width: 711px;
   display: flex;
   flex-direction: column;
   gap: 16px;
-  min-width: 710px;
 }
 
 .result__video-container {
-  position: relative;
   height: 386px;
+  position: relative;
 }
 
 .result__video {
@@ -114,19 +118,43 @@ ol {
   font-weight: 400;
 }
 
+.search-form__label {
+  cursor: pointer;
+}
+
+.search-form__label:focus {
+  border: none;
+  outline: none;
+}
+
+.search-form__label:has(:focus-visible) {
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__label-text:hover {
+  text-decoration: underline;
+}
+
 .search-form__textfield {
+  appearance: none;
   background-color: transparent;
   color: rgba(255, 255, 255, 0.7);
-  font-family: Fira Sans Condensed;
-  font-size: 18px;
-  font-style: normal;
-  font-weight: 400;
-  line-height: normal;
-  display: flex;
-  width: 225px;
-  height: 27px;
-  align-items: center;
-  gap: 10px;
+  font-family: inherit;
+  font-size: inherit;
+  min-width: 225px;
+  border: 1px solid transparent;
+  border-top: 1px solid #fff;
+  border-bottom: 1px solid #fff;
+
+}
+
+.search-form__textfield:focus {
+  border: none;
+  outline: none;
+}
+
+.search-form__textfield:focus-visible {
   border-top: 1px solid #fff;
   border-bottom: 1px solid #fff;
 }
@@ -145,9 +173,43 @@ ol {
   border: 1px solid #fff;
 }
 
+input[type='checkbox']:checked + span {
+  display: inline-block;
+  vertical-align: middle;
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__pseudo-checkbox:active {
+  display: inline-block;
+  vertical-align: middle;
+  width: 17px;
+  height: 17px;
+  background-color: #fff;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
 .search-form__submit-button {
-  width: 194px;
+  min-width: 194px;
   margin-top: 20px;
+}
+
+.search-form__submit-button:focus-visible {
+  border: 1px solid #fff;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.search-form__submit-button:hover {
+  text-decoration: underline;
+}
+
+.search-form__submit-button:active {
+  background-color: #545050;
 }
 
 /*****************************/
@@ -157,8 +219,10 @@ ol {
 .content__details {
   display: flex;
   flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  min-height: 534px;
   gap: 26px;
-  width: 402px;
 }
 
 .title {
@@ -175,7 +239,7 @@ ol {
 }
 
 .content__list {
-  height: 298px;
+  max-height: 298px;
   overflow: auto;
   position: relative;
 }
@@ -193,23 +257,42 @@ ol {
   background: transparent;
 }
 
-.content__list-item:not(:last-child) {
-  margin-bottom: 33px;
+.content__list-item {
+  margin-bottom: 30px;
+  border: 1px solid transparent;
 }
+
 
 .content__card-link {
   color: #fff;
   text-decoration: none;
 }
 
+.content__card-link:focus {
+  outline: none;
+}
+
 .content__video-card {
   display: flex;
   justify-content: space-between;
-  height: 103px;
+  width: 100%;
+}
+
+.content__list-item:has(:focus-visible) {
+  border: 1px solid #fff;
+}
+
+.content__list-item:hover {
+  text-decoration: underline;
+}
+
+.content__list-item:active {
+  background-color: #545050;
+  border: 1px solid #545050;
 }
 
 .content__video-card-description-container {
-  min-width: 200px;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 6px;
@@ -229,11 +312,27 @@ ol {
 
 .content__video-card-thumbnail {
   width: 100%;
-  height: 100%;
+  height: 103px;
   object-fit: cover;
   object-position: center;
 }
 
 .more-button {
-  width: 100%;
+  width: 97%;
+  margin-left: 2%;
+  margin-bottom: 2%;
+}
+
+.more-button:focus-visible {
+  border: 1px solid #fff;
+  outline: 1px solid #fff;
+  outline-offset: 1px;
+}
+
+.more-button:hover {
+  text-decoration: underline;
+}
+
+.search-form__submit-button:active {
+  background-color: #545050;
 }
