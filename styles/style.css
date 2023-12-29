@@ -145,18 +145,15 @@ ol {
 .search-form__label:has(:focus-visible) {
   outline: 1px solid currentColor;
   outline-offset: 1px;
+
 }
 
-.search-form__label:hover {
-  .search-form__label-text {
+.search-form__label:hover .search-form__label-text {
     text-decoration: underline;
-  }
 }
 
-.search-form__label:active {
-  .search-form__label-text {
+.search-form__label:active .search-form__label-text {
     text-decoration: none;
-  }
 }
 
 .search-form__textfield {
@@ -172,13 +169,7 @@ ol {
 }
 
 .search-form__textfield:focus {
-  border: none;
   outline: none;
-}
-
-.search-form__textfield:focus-visible {
-  border-top: 1px solid #fff;
-  border-bottom: 1px solid #fff;
 }
 
 .search-form__textfield:active {
@@ -276,8 +267,11 @@ input[type="checkbox"]:checked + span {
   display: block;
   color: currentColor;
   text-decoration: none;
-  background-color: content__card-link_current;
   border: 1px solid transparent;
+}
+
+.content__card-link_current {
+  background-color: #545050;
 }
 
 .content__card-link:focus-visible {
